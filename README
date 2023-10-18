@@ -1,4 +1,11 @@
 Monitor And Keeping IT Maintenance Active or Makima is a utility tool that takes input as chromebook data and turns it into a json format.
-This repository has the source code for the program, in the 'main.c' file. The program is still in development, and is not yet ready for use.
 
-You can compile the program by using the following command: `gcc -o makima main.c`
+You can find the source code for the different builds in each specified directory. `./windows` is for Windows, `./linux` is for Linux, and `./macOS` is for macOS. 
+
+You can compile for each platform using the following scripts:
+
+    `./winBuild.bat` - Windows compilation using batch script
+    `./linBuild.sh` - Linux compilation using bash
+    `Coming soon` - I will find a way to compile using Mac.
+
+Thanks for using Makima!
