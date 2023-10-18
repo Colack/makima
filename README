@@ -2,10 +2,9 @@ Monitor And Keeping IT Maintenance Active or Makima is a utility tool that takes
 
 You can find the source code for the different builds in each specified directory. `./windows` is for Windows, `./linux` is for Linux, and `./macOS` is for macOS. 
 
-You can compile for each platform using the following scripts:
+You can compile for each platform using the following:
 
-    `./winBuild.bat` - Windows compilation using batch script
-    `./linBuild.sh` - Linux compilation using bash
-    `Coming soon` - I will find a way to compile using Mac.
+    `gcc -o makima ./windows/main.c` - Windows. Executable is called Makima.exe
+    `gcc -o makima ./macOS/main.c` - macOS. Executable is called Makima.
 
 Thanks for using Makima!
