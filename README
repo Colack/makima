@@ -2,14 +2,3 @@ Monitor And Keeping IT Maintenance Active or Makima is a utility tool that takes
 This repository has the source code for the program, in the 'main.c' file. The program is still in development, and is not yet ready for use.
 
 You can compile the program by using the following command: `gcc -o makima main.c`
-
-Since this is still in development, I'm coming up and am open to ideas. 
-
-Here are some ideas for you to do:
-
-- Implement doom into the code.
-- Make the Bad Apple Music Video Play
-- Make this run Windows
-- etc.
-
-Pretty simple projects.
