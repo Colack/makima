@@ -7,7 +7,7 @@
   Author: Jack Spencer
   License: MIT
   Date: 2023-10-17
-  Version: 0.0.11
+  Version: 0.0.11-Windows-Alpha
 */
 
 #include <stdio.h>
@@ -15,11 +15,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define VERSION "0.0.11"
+#define VERSION "0.0.11-Windows-Alpha"
 #define AUTHOR "Jack Spencer"
 #define LICENSE "MIT"
 #define MAX_INPUT 100
 #define MAX_INPUT_LARGE 1000
+
+#ifndef FOREGROUND_RED
+#define FOREGROUND_RED 0x0004
+#endif
 
 void removeNewLine(char *string);
 void printCredits(HANDLE consoleHandle, WORD attribute);
@@ -484,4 +488,4 @@ int main() {
   return 0;
 }
 
-// Path: main.c
+// Path: /windows/main.c
