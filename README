@@ -4,7 +4,7 @@ You can find the source code for the different builds in each specified director
 
 You can compile for each platform using the following:    
 
-    `gcc -o makima ./windows/main.c` - Windows. Executable is called Makima.exe
-    `gcc -o makima ./macOS/main.c` - macOS. Executable is called Makima.
+    Windows: `gcc -o makima ./windows/core.c ./windows/lib.c`
+    macOS (OS-X): `gcc -o makima ./macOS/main.c`
 
-Thanks for using Makima!
+All exectuables will be called `Makima`

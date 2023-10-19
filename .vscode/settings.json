@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "string": "c",
-        "vector": "c++",
-        "map": "c++",
-        "unordered_map": "c++",
-    }
-}
