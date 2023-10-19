@@ -1,5 +1,13 @@
 #include "lib.h"
 
+const char *makima_errorMessages[] = {
+  "If this shows up, something went wrong. :/",
+  "You need to enter a command.",
+  "Undefined Error at line 1: `#include \"lib.h\"`",
+  "Maybe if you stop using the program, errors will stop showing up.",
+  "Stop screwing around with the source code."
+};
+
 void removeNewLine(char *string) {
   size_t length = strlen(string);
   if (length > 0 && string[length - 1] == '\n') {
@@ -18,7 +26,15 @@ void printCredits(HANDLE consoleHandle, WORD attribute) {
   printf("\n\n\n");
 }
 
-void printStartMenu(HANDLE consoleHandle, WORD attribute) {
+void printStartMenu(bool clearScreen, bool fullScreen, HANDLE consoleHandle, WORD attribute) {
+  if (clearScreen) {
+    clearConsole();
+  }
+
+  if (fullScreen) {
+    checkIfFullScreen();
+  }
+
   SetConsoleTextAttribute(consoleHandle, FOREGROUND_RED);
 
   printf("           ###############           \n");
@@ -406,7 +422,7 @@ void getMakimaCommand(char *stringInput, HANDLE consoleHandle, WORD attribute) {
   } else if (strcmp(stringInput, "clear") == 0) {
     clearConsole();
   } else if (strcmp(stringInput, "printStartMenu") == 0) {
-    printStartMenu(consoleHandle, attribute);
+    printStartMenu(true, true, consoleHandle, attribute);
   } else if (strcmp(stringInput, "exit") == 0) {
     printf("Exiting...\n");
 
@@ -444,6 +460,44 @@ void checkIfFullScreen() {
 
 void clearConsole() {
     system("cls");
+}
+
+bool createDirectory(char *directoryName) {
+  if (checkIfDirectoryExists(directoryName)) {
+    return false;
+  } else {
+    mkdir(directoryName);
+    return true;
+  }
+}
+
+bool createFile(char *fileName) {
+  if (checkIfFileExists(fileName)) {
+    return false;
+  } else {
+    FILE *fp;
+    fp = fopen(fileName, "w");
+    fclose(fp);
+    return true;
+  }
+}
+
+void printError(char *errorMessage, char *errorType, bool exitProgram, int errorCode, HANDLE consoleHandle, WORD attribute) {
+  printf("\n\n--Error--\n\n");
+  printf("Error: %s\n", errorMessage);
+  printf("Error Type: %s\n", errorType);
+  printf("Error Code: %d\n", errorCode);
+
+  if (exitProgram) {
+    printf("\nExiting...\n");
+
+    printf("Thanks for using ");
+    SetConsoleTextAttribute(consoleHandle, FOREGROUND_RED);
+    printf("Makima");
+    SetConsoleTextAttribute(consoleHandle, attribute);
+
+    exit(0);
+  }
 }
 
 // Path: windows/lib.c
