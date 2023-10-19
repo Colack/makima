@@ -20,8 +20,13 @@
 #define VERSION "0.0.12-Windows-Alpha"
 #define AUTHOR "Jack Spencer"
 #define LICENSE "MIT"
+
 #define MAX_INPUT 100
 #define MAX_INPUT_LARGE 1000
+
+#define DEFAULT_FILE "data.json"
+#define DEFAULT_ERROR_FILE "error.log"
+#define DEFAULT_ERROR_TEXT "If this shows up, something went wrong. :/"
 
 #ifndef F_OK
 #define F_OK 0 
