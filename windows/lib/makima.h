@@ -1,25 +1,9 @@
-#include "ime.h"
+#include "../ime.h"
 
-void removeNewLine(char *string);
-void printCredits(HANDLE consoleHandle, WORD attribute);
-void printStartMenu(bool clearScreen, bool fullScreen, HANDLE consoleHandle, WORD attribute);
-void printHelp(HANDLE consoleHandle, WORD attribute);
-void readOldChromeBookData(HANDLE consoleHandle, WORD attribute);
-void readAllChromeBookData(HANDLE consoleHandle, WORD attribute);
-void enterNewChromeBookDataMode(HANDLE consoleHandle, WORD attribute);
-void getMakimaCommand(char *stringInput, HANDLE consoleHandle, WORD attribute);
-bool checkIfFileExists(char *fileName);
-bool checkIfDirectoryExists(char *directoryName);
-void checkIfFullScreen();
-void clearConsole();
-bool createDirectory(char *directoryName);
-bool createFile(char *fileName);
-void printError(char *errorMessage, char *errorType, bool exitProgram, int errorCode, HANDLE consoleHandle, WORD attribute);
+// TODO: Add parameters for the different chromebook requirements
 
 void MAKIMA_readOldChromeBookData(HANDLE consoleHandle, WORD attribute);
 void MAKIMA_readAllChromeBookData(HANDLE consoleHandle, WORD attribute);
-
-// TODO: Add parameters for the different requirements for chromebook information
 
 bool MAKIMA_addNewChromeBookData(HANDLE consoleHandle, WORD attribute);
 bool MAKIMA_addNewComputerData(HANDLE consoleHandle, WORD attribute);
@@ -41,6 +25,14 @@ char MAKIMA_getAllChromeBookData(HANDLE consoleHandle, WORD attribute);
 char MAKIMA_getAllComputerData(HANDLE consoleHandle, WORD attribute);
 char MAKIMA_getAllPartUsed(HANDLE consoleHandle, WORD attribute);
 
-void MAKIMA_credits(HANDLE consoleHandle, WORD attribute);
+char MAKIMA_getCredits(HANDLE consoleHandle, WORD attribute);
+char MAKIMA_getHelp(HANDLE consoleHandle, WORD attribute);
+char MAKIMA_getHelpForSpecificCommand(char command, HANDLE consoleHandle, WORD attribute);
+char MAKIMA_getAsciiArt();
+char MAKIMA_printStartMenu(bool clearScreen, bool fullScreen, HANDLE consoleHandle, WORD attribute);
 
-// Path: windows/ime.h
+int MAKIMA_translateCommandToHash(char *command);
+char MAKIMA_translateHashToCommand(int hash);
+
+void MAKIMA_commandManager(char command, int hash);
+void MAKIMA_getCommandInput();

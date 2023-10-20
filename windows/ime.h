@@ -21,6 +21,10 @@
 #define AUTHOR "Jack Spencer"
 #define LICENSE "MIT"
 
+#define MAKIMA_VERSION "0.0.12-Windows-Alpha"
+#define MAKIMA_AUTHOR "Jack Spencer"
+#define MAKIMA_LICENSE "MIT"
+
 #define MAX_INPUT 100
 #define MAX_INPUT_LARGE 1000
 
