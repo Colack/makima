@@ -34,7 +34,7 @@ int main(bool hashEnabled) {
         saved_attributes = consoleInfo.wAttributes;
 
         MAKIMA_getCommandInput(hConsole, saved_attributes);
-
-        return 0;
     }
+
+    return 0;
 }

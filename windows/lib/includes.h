@@ -39,6 +39,8 @@
 #define DEFAULT_ERROR_FILE "error.log"
 #define DEFAULT_ERROR_TEXT "If this shows up, something went wrong. :/"
 
+#define HELP_HASH
+
 #ifndef F_OK
 #define F_OK 0 
 #endif

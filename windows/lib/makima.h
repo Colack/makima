@@ -34,5 +34,5 @@ char MAKIMA_printStartMenu(bool clearScreen, bool fullScreen, HANDLE consoleHand
 int MAKIMA_translateCommandToHash(char *command);
 char MAKIMA_translateHashToCommand(int hash);
 
-void MAKIMA_commandManager(char command, int hash);
+void MAKIMA_commandManager(int hashedCommaned);
 void MAKIMA_getCommandInput(HANDLE consoleHandle, WORD attribute);
