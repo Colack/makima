@@ -5,4 +5,5 @@
 
 uint32_t HASH_hashInput(const char *str);
 
+
 #endif

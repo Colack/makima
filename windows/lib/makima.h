@@ -2,8 +2,8 @@
 
 // TODO: Add parameters for the different chromebook requirements
 
-void MAKIMA_readOldChromeBookData(HANDLE consoleHandle, WORD attribute);
-void MAKIMA_readAllChromeBookData(HANDLE consoleHandle, WORD attribute);
+char MAKIMA_readOldChromeBookData(HANDLE consoleHandle, WORD attribute);
+char MAKIMA_readAllChromeBookData(HANDLE consoleHandle, WORD attribute);
 
 bool MAKIMA_addNewChromeBookData(HANDLE consoleHandle, WORD attribute);
 bool MAKIMA_addNewComputerData(HANDLE consoleHandle, WORD attribute);
@@ -35,4 +35,4 @@ int MAKIMA_translateCommandToHash(char *command);
 char MAKIMA_translateHashToCommand(int hash);
 
 void MAKIMA_commandManager(char command, int hash);
-void MAKIMA_getCommandInput();
+void MAKIMA_getCommandInput(HANDLE consoleHandle, WORD attribute);

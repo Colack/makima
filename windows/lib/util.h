@@ -32,3 +32,5 @@ bool UTIL_stillInDebugMode(bool *debugMode);
 
 char UTIL_returnAsLowercase(char *string);
 char UTIL_returnAsUppercase(char *string);
+
+char UTIL_removeNewLine(char string);
