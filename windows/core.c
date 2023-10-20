@@ -16,7 +16,6 @@
 
 int main(bool isDebug, bool enterHash) {
   if (enterHash) {
-    // Get input from user.
     char hashInput[100];
 
     printf("Enter String to Hash: > ");
@@ -24,10 +23,7 @@ int main(bool isDebug, bool enterHash) {
     UTIL_returnAsLowercase(hashInput);
     removeNewLine(hashInput);
 
-    // Hash the input.
     uint32_t hash = HASH_hashInput(hashInput);
-
-    // Print the hash.
 
     printf("Hash: %d\n", hash);
   }

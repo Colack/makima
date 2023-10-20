@@ -10,6 +10,11 @@
   Version: 0.0.12-Windows-Alpha
 */
 
+#pragma once
+
+#ifndef INCLUDES_H 
+#define INCLUDES_H
+
 #include <stdio.h>
 #include <windows.h>
 #include <stdlib.h>
@@ -38,6 +43,8 @@
 
 #ifndef FOREGROUND_RED
 #define FOREGROUND_RED 0x0004
+#endif
+
 #endif
 
 // Path: windows/ime.h
