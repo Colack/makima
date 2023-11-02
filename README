@@ -7,4 +7,4 @@ You can compile for each platform using the following:
     Windows: `gcc -o makima ./windows/core.c ./windows/lib.c`
     macOS (OS-X): `gcc -o makima ./macOS/main.c`
 
-All exectuables will be called `Makima`
+All executables will be called `Makima`
