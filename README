@@ -13,4 +13,4 @@ and for C++ builds:
 
 All executables will be called `Makima`
 
-There are some plans to make a installer for the program that puts the executable into the system environment variables (for windows,) but that will be in the future when the program gets out of Alpha & Beta. 
+There are some plans to make a installer for the program that puts the executable into the system environment variables (for windows,) but that will be in the future when the program gets out of Alpha & Beta. z
